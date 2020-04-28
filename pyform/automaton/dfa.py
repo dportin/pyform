@@ -1,5 +1,6 @@
 from bidict import bidict
 from collections import deque
+from itertools import chain
 from pyform.automaton.fa import FA
 from pyform.common.disjoint import DisjointSet
 from pyform.common.partition import Partition
@@ -134,11 +135,11 @@ class DFA(FA):
         while worklist:
             state = worklist.pop()
             if state not in reached:
-                targets = set(
+                targets = set(chain.from_iterable(
                     inverse[state][a]
                     for a in symbols
                     if state in inverse and a in inverse[state]
-                )
+                ))
                 reached.add(state)
                 worklist.extend(targets - reached)
 
