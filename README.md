@@ -1,4 +1,4 @@
-# Python Formal Languages Library (PyFLL)
+# Python Formal Languages Library (PyForm)
 
 This repository contains implementations of various algorithms from formal language theory. It aims to provide a simple platform for expressing and manipulating finite automata, formal grammars and regular expressions.
 
@@ -7,7 +7,7 @@ This repository contains implementations of various algorithms from formal langu
 Find minimal partial automaton equivalent to given automaton, construct isomorphism between minimized automaton and expected result, and check the automata for language equivalence.
 
 ```
-from pyre.automaton.dfa import DFA
+from pyform.automaton.dfa import DFA
 
 dfa = DFA(
 	states = set([0,1,2,3,4,5,6,7]),
