@@ -365,6 +365,9 @@ class DFA(FA):
         while worklist:
             q1, r1 = worklist.pop()
 
+            if (q1 in self.finals) ^ (r1 in dfa.finals):
+                return None
+            
             if q1 not in self.delta and r1 not in dfa.delta:
                 continue
 
@@ -373,7 +376,6 @@ class DFA(FA):
             # those transitions have different labels.
 
             if (q1 in self.delta) ^ (r1 in dfa.delta) or \
-               (q1 in self.finals) ^ (r1 in dfa.finals) or \
                self.delta[q1].keys() ^ dfa.delta[r1].keys():
                 return None
 
