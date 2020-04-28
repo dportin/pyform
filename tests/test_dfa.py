@@ -48,7 +48,7 @@ class TestMinimizeValmari(TestCase):
         
         dfa_min = dfa.minimize_valmari()
         self.assertIsNotNone(dfa_min.isomorphic(expected))
-        self.assertTrue(dfa_min.equivalent_hopcroft_karp(expected)[0])
+        self.assertTrue(dfa_min.equivalent_hopcroft_karp(dfa)[0])
 
     def test_minimize_valmari_2(self):
 
@@ -83,7 +83,7 @@ class TestMinimizeValmari(TestCase):
 
         dfa_min = dfa.minimize_valmari()
         self.assertIsNotNone(dfa_min.isomorphic(expected))
-        self.assertTrue(dfa_min.equivalent_hopcroft_karp(expected)[0])
+        self.assertTrue(dfa_min.equivalent_hopcroft_karp(dfa)[0])
 
     def test_minimize_valmari_3(self):
 
@@ -117,7 +117,7 @@ class TestMinimizeValmari(TestCase):
 
         dfa_min = dfa.minimize_valmari()
         self.assertIsNotNone(dfa_min.isomorphic(expected))
-        self.assertTrue(dfa_min.equivalent_hopcroft_karp(expected)[0])
+        self.assertTrue(dfa_min.equivalent_hopcroft_karp(dfa)[0])
 
     def test_minimize_valmari_4(self):
 
@@ -150,7 +150,7 @@ class TestMinimizeValmari(TestCase):
 
         dfa_min = dfa.minimize_valmari()
         self.assertIsNotNone(dfa_min.isomorphic(expected))
-        self.assertTrue(dfa_min.equivalent_hopcroft_karp(expected)[0])
+        self.assertTrue(dfa_min.equivalent_hopcroft_karp(dfa)[0])
 
     def test_minimize_valmari_5(self):
 
@@ -185,7 +185,7 @@ class TestMinimizeValmari(TestCase):
 
         dfa_min = dfa.minimize_valmari()
         self.assertIsNotNone(dfa_min.isomorphic(expected))
-        self.assertTrue(dfa_min.equivalent_hopcroft_karp(expected)[0])
+        self.assertTrue(dfa_min.equivalent_hopcroft_karp(dfa)[0])
 
 if __name__ == '__main__':
     
