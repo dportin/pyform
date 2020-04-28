@@ -62,7 +62,7 @@ class DFA(FA):
 
         """The set of states obtained by transitioning from some state in
         states on symbols in symbols. This method does not assume the validity
-        of statest and symbols passed as arguments.
+        of states and symbols passed as arguments.
 
         Args:
             states  : Iterable of states.
@@ -76,7 +76,7 @@ class DFA(FA):
         return set(
             self.delta[q][a]
             for (q, a) in zip(states, symbols)
-            if q in self.delta and a in self.deltq[a]
+            if q in self.delta and a in self.delta[a]
         )
 
     def reachable(self, states, symbols):
